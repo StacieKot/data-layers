@@ -1,6 +1,6 @@
 {
   "name": "@StacieKot/data-layers",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "homepage": "https://github.com/StacieKot/data-layers#readme",
   "bugs": {
@@ -16,8 +16,21 @@
   "license": "ISC",
   "author": "",
   "type": "commonjs",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "bun run build",
     "test": "exit 0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.14",
+    "typescript": "^5.9.3"
+  },
+  "peerDependencies": {
+    "react": ">=17"
   }
 }
